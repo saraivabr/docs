@@ -1,0 +1,47 @@
+---
+title: "Expectativas de on-call"
+description: "Como funciona a rotação de on-call, o que se espera de você e como escalonar."
+---
+
+A responsabilidade de on-call gira semanalmente entre as pessoas devs de cada time. Estar de on-call significa que você é o primeiro respondente para alertas de produção durante o seu turno.
+
+## Escala de rotação
+
+Confira a escala de on-call do seu time no NightWatch. As escalas são definidas com quatro semanas de antecedência. Se precisar trocar um turno, combine direto com um colega e atualize a escala — não simplesmente deixe de aparecer.
+
+Pessoas devs novas entram na rotação após 60 dias. Suas primeiras semanas de on-call são acompanhadas — você responde, mas uma pessoa sênior fica como secundária caso você precise de apoio.
+
+## Antes do seu turno
+
+- Confirme que seu telefone está correto na ferramenta de alertas.
+- Cheque `#deploys` para ver mudanças recentes que possam ser frágeis.
+- Revise issues SEV-3 abertos que possam escalar.
+
+## Durante o seu turno
+
+**Disponibilidade:** Responda a páginas em até 5 minutos no horário comercial e em até 15 minutos fora dele. Se não conseguir responder nesse tempo, escale para o secundário imediatamente.
+
+**Para cada alerta:**
+
+1. Reconheça o alerta para parar o re-paging.
+2. Triagem: é problema real ou ruído? Se for ruído, resolva e abra um ticket para corrigir o alerta.
+3. Se for real, siga o [processo de resposta a incidentes](/pt-br/engineering/incident-response).
+
+**Mantendo notas:** Mantenha uma thread contínua no Slack em `#incidents` mesmo para problemas pequenos. Isso cria registro e ajuda a próxima pessoa de on-call a entender o que aconteceu.
+
+## Caminho de escalonamento
+
+Se você está investigando há 15 minutos e está travado:
+
+1. Page o on-call secundário.
+2. Se ainda estiver travado depois de mais 15 minutos, escale para seu engineering manager.
+
+Não espere até estar muito travado. Pedir ajuda cedo é a decisão certa.
+
+## Depois do seu turno
+
+Faça handoff de issues abertos para a próxima pessoa de on-call em `#incidents`. Inclua: o que aconteceu, status atual e o que monitorar.
+
+## Compensação de on-call
+
+Turnos de on-call fora do horário comercial são compensados. Veja com o RH ou seu gestor as taxas atuais.

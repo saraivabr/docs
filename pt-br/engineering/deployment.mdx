@@ -1,0 +1,51 @@
+---
+title: "Deploy"
+description: "Como o código vai de um PR mergeado até a produção e como fazer rollback quando algo dá errado."
+---
+
+Usamos um modelo de deploy trunk-based. Merge na `main` dispara um deploy de staging automaticamente; deploys de produção são disparados manualmente após verificação.
+
+## Visão geral do fluxo
+
+```
+feature branch → review do PR → merge na main → auto-deploy em staging → promoção manual para produção
+```
+
+## Deploy em staging
+
+Todo merge na `main` dispara um deploy em staging automaticamente via CI. Você não precisa fazer nada. Acompanhe o status pelo canal `#deploys` no Slack.
+
+Deploys em staging levam aproximadamente 5 a 10 minutos. Se um deploy falhar, o CI posta o erro em `#deploys` com link para a execução que falhou.
+
+## Promovendo para produção
+
+Depois de validar uma alteração em staging:
+
+1. Vá até a deploy tool (link na descrição do canal `#deploys`).
+2. Selecione o build de staging que quer promover.
+3. Clique em **Promote to production**.
+4. Acompanhe o canal `#deploys` para confirmação ou erros.
+
+Deploys de produção exigem que pelo menos uma pessoa que não é a autora da alteração clique em promote. É um soft guard — use bom senso em emergências.
+
+## Feature flags
+
+A maioria das funcionalidades novas é deployada atrás de feature flag para desacoplar deploy de release. As flags são gerenciadas no [Flag Tool Name]. Pergunte ao seu tech lead sobre a convenção de nomes e o processo de cleanup.
+
+## Rollbacks
+
+Se um deploy de produção causar um incidente:
+
+1. Use a deploy tool para fazer rollback ao build anterior de produção imediatamente.
+2. Não espere para diagnosticar — primeiro rollback, depois investigação.
+3. Abra um [incidente](/pt-br/engineering/incident-response) e inicie um postmortem se houve impacto a usuários.
+
+Rollback leva cerca de 2 minutos. É seguro e reversível — faça cedo.
+
+## Migrações de banco
+
+Migrações rodam automaticamente como parte do pipeline de deploy. Migrações com quebra de compatibilidade exigem deploy multi-fase — pergunte em `#eng` antes de mergear se sua migração derruba uma coluna ou muda um tipo.
+
+## Janelas de freeze
+
+Congelamos deploys de produção em eventos importantes ou no último dia útil antes de feriados. O canal `#deploys` vai pinar uma mensagem quando um freeze estiver ativo.

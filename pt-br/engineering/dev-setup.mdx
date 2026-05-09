@@ -1,0 +1,71 @@
+---
+title: "Setup de desenvolvimento"
+description: "Coloque seu ambiente local rodando a partir de uma máquina nova em menos de uma hora."
+---
+
+Este guia assume uma máquina macOS nova com seu notebook corporativo já enrolled em MDM. Para Windows, veja a nota de setup no fim da página.
+
+## Pré-requisitos
+
+Antes de começar, confirme que você tem:
+
+- Notebook corporativo enrolled em MDM — veja [configuração do notebook](/pt-br/onboarding/tools/laptop-setup)
+- VPN conectada — veja [configuração da VPN](/pt-br/onboarding/tools/vpn-setup)
+- Acesso ao repositório Git — veja [acesso a contas](/pt-br/onboarding/tools/account-access)
+
+## Passo 1: Instalar o ferramental base
+
+Rode o script de bootstrap — seu tech lead vai compartilhar o link no seu primeiro dia:
+
+```bash
+/bin/bash -c "$(curl -fsSL https://setup.yourcompany.com/bootstrap.sh)"
+```
+
+Se preferir instalar manualmente, o script instala: gerenciador de pacotes, git, runtimes de linguagem, Docker e sua IDE.
+
+## Passo 2: Clonar o repositório principal
+
+```bash
+mkdir ~/code && cd ~/code
+git clone git@git.yourcompany.com:your-repo.git
+```
+
+Se `git clone` falhar com erro de permissão, sua chave SSH não está autorizada. Peça ao seu tech lead para checar seu acesso.
+
+## Passo 3: Configurar variáveis de ambiente
+
+Cada repo tem um `.env.example` na raiz. Copie:
+
+```bash
+cp .env.example .env.local
+```
+
+Preencha os valores necessários — pergunte ao seu tech lead ou cheque o canal `#eng-setup` no Slack para os secrets de desenvolvimento. Não commite `.env.local`.
+
+## Passo 4: Instalar dependências e rodar localmente
+
+```bash
+cd your-repo
+npm install
+npm run dev
+```
+
+O app deve estar rodando em `http://localhost:3000`. Se aparecerem erros, verifique o `README.md` do próprio repo para requisitos específicos do serviço (bancos, filas, etc.).
+
+## Passo 5: Validar seu setup
+
+Rode a suíte de testes para confirmar que tudo está conectado:
+
+```bash
+npm test
+```
+
+Todos os testes devem passar em um clone limpo. Se não passarem, poste em `#eng-setup` com a saída de erro antes de tentar debugar sozinho.
+
+## Windows
+
+Não suportamos oficialmente Windows para desenvolvimento local. WSL2 funciona para a maioria das pessoas devs, mas você vai precisar adaptar alguns passos. Fale com seu tech lead antes da sua data de início se preferir Windows.
+
+## Pedindo ajuda
+
+Poste em `#eng-setup` no Slack. Inclua sua versão do SO, o comando que rodou e a saída completa de erro.

@@ -19,134 +19,276 @@
     "options": ["copy", "view", "assistant", "mcp", "add-mcp"]
   },
   "navigation": {
-    "tabs": [
+    "languages": [
       {
-        "tab": "Onboarding",
-        "groups": [
+        "language": "en",
+        "default": true,
+        "tabs": [
           {
-            "group": "Welcome",
-            "pages": ["index"]
-          },
-          {
-            "group": "Your first days",
-            "pages": [
-              "onboarding/first-day",
-              "onboarding/first-week",
-              "onboarding/meet-the-team"
+            "tab": "Onboarding",
+            "groups": [
+              {
+                "group": "Welcome",
+                "pages": ["index"]
+              },
+              {
+                "group": "Your first days",
+                "pages": [
+                  "onboarding/first-day",
+                  "onboarding/first-week",
+                  "onboarding/meet-the-team"
+                ]
+              },
+              {
+                "group": "Tools & access",
+                "pages": [
+                  "onboarding/tools/laptop-setup",
+                  "onboarding/tools/account-access",
+                  "onboarding/tools/vpn-setup"
+                ]
+              }
             ]
           },
           {
-            "group": "Tools & access",
-            "pages": [
-              "onboarding/tools/laptop-setup",
-              "onboarding/tools/account-access",
-              "onboarding/tools/vpn-setup"
+            "tab": "HR & People",
+            "groups": [
+              {
+                "group": "Overview",
+                "pages": ["hr-people/index"]
+              },
+              {
+                "group": "Benefits & time off",
+                "pages": [
+                  "hr-people/benefits",
+                  "hr-people/time-off"
+                ]
+              },
+              {
+                "group": "Growth & pay",
+                "pages": [
+                  "hr-people/performance-reviews",
+                  "hr-people/compensation/index",
+                  "hr-people/compensation/salary-bands",
+                  "hr-people/compensation/equity-overview"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "IT & Security",
+            "groups": [
+              {
+                "group": "Overview",
+                "pages": ["it-security/index"]
+              },
+              {
+                "group": "Access & devices",
+                "pages": [
+                  "it-security/access-requests",
+                  "it-security/device-policy"
+                ]
+              },
+              {
+                "group": "Security training",
+                "pages": [
+                  "it-security/security-training/index",
+                  "it-security/security-training/phishing",
+                  "it-security/security-training/data-handling"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "Policies",
+            "groups": [
+              {
+                "group": "Overview",
+                "pages": ["policies/index"]
+              },
+              {
+                "group": "Conduct & spend",
+                "pages": [
+                  "policies/code-of-conduct",
+                  "policies/expense-reimbursement",
+                  "policies/travel-policy"
+                ]
+              },
+              {
+                "group": "Remote work",
+                "pages": [
+                  "policies/remote-work/index",
+                  "policies/remote-work/home-office-setup",
+                  "policies/remote-work/time-zones"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "Engineering",
+            "groups": [
+              {
+                "group": "Overview",
+                "pages": ["engineering/index"]
+              },
+              {
+                "group": "Setup & deployment",
+                "pages": [
+                  "engineering/dev-setup",
+                  "engineering/deployment"
+                ]
+              },
+              {
+                "group": "Incident response",
+                "pages": [
+                  "engineering/incident-response/index",
+                  "engineering/incident-response/on-call",
+                  "engineering/incident-response/postmortem"
+                ]
+              },
+              {
+                "group": "Architecture",
+                "pages": [
+                  "engineering/architecture/index",
+                  "engineering/architecture/services-overview",
+                  "engineering/architecture/data-models"
+                ]
+              }
             ]
           }
         ]
       },
       {
-        "tab": "HR & People",
-        "groups": [
+        "language": "pt-BR",
+        "tabs": [
           {
-            "group": "Overview",
-            "pages": ["hr-people/index"]
-          },
-          {
-            "group": "Benefits & time off",
-            "pages": [
-              "hr-people/benefits",
-              "hr-people/time-off"
+            "tab": "Onboarding",
+            "groups": [
+              {
+                "group": "Boas-vindas",
+                "pages": ["pt-br/index"]
+              },
+              {
+                "group": "Seus primeiros dias",
+                "pages": [
+                  "pt-br/onboarding/first-day",
+                  "pt-br/onboarding/first-week",
+                  "pt-br/onboarding/meet-the-team"
+                ]
+              },
+              {
+                "group": "Ferramentas e acessos",
+                "pages": [
+                  "pt-br/onboarding/tools/laptop-setup",
+                  "pt-br/onboarding/tools/account-access",
+                  "pt-br/onboarding/tools/vpn-setup"
+                ]
+              }
             ]
           },
           {
-            "group": "Growth & pay",
-            "pages": [
-              "hr-people/performance-reviews",
-              "hr-people/compensation/index",
-              "hr-people/compensation/salary-bands",
-              "hr-people/compensation/equity-overview"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "IT & Security",
-        "groups": [
-          {
-            "group": "Overview",
-            "pages": ["it-security/index"]
-          },
-          {
-            "group": "Access & devices",
-            "pages": [
-              "it-security/access-requests",
-              "it-security/device-policy"
-            ]
-          },
-          {
-            "group": "Security training",
-            "pages": [
-              "it-security/security-training/index",
-              "it-security/security-training/phishing",
-              "it-security/security-training/data-handling"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "Policies",
-        "groups": [
-          {
-            "group": "Overview",
-            "pages": ["policies/index"]
-          },
-          {
-            "group": "Conduct & spend",
-            "pages": [
-              "policies/code-of-conduct",
-              "policies/expense-reimbursement",
-              "policies/travel-policy"
+            "tab": "RH e Pessoas",
+            "groups": [
+              {
+                "group": "Visão geral",
+                "pages": ["pt-br/hr-people/index"]
+              },
+              {
+                "group": "Benefícios e folgas",
+                "pages": [
+                  "pt-br/hr-people/benefits",
+                  "pt-br/hr-people/time-off"
+                ]
+              },
+              {
+                "group": "Crescimento e remuneração",
+                "pages": [
+                  "pt-br/hr-people/performance-reviews",
+                  "pt-br/hr-people/compensation/index",
+                  "pt-br/hr-people/compensation/salary-bands",
+                  "pt-br/hr-people/compensation/equity-overview"
+                ]
+              }
             ]
           },
           {
-            "group": "Remote work",
-            "pages": [
-              "policies/remote-work/index",
-              "policies/remote-work/home-office-setup",
-              "policies/remote-work/time-zones"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "Engineering",
-        "groups": [
-          {
-            "group": "Overview",
-            "pages": ["engineering/index"]
-          },
-          {
-            "group": "Setup & deployment",
-            "pages": [
-              "engineering/dev-setup",
-              "engineering/deployment"
-            ]
-          },
-          {
-            "group": "Incident response",
-            "pages": [
-              "engineering/incident-response/index",
-              "engineering/incident-response/on-call",
-              "engineering/incident-response/postmortem"
+            "tab": "TI e Segurança",
+            "groups": [
+              {
+                "group": "Visão geral",
+                "pages": ["pt-br/it-security/index"]
+              },
+              {
+                "group": "Acessos e dispositivos",
+                "pages": [
+                  "pt-br/it-security/access-requests",
+                  "pt-br/it-security/device-policy"
+                ]
+              },
+              {
+                "group": "Treinamento de segurança",
+                "pages": [
+                  "pt-br/it-security/security-training/index",
+                  "pt-br/it-security/security-training/phishing",
+                  "pt-br/it-security/security-training/data-handling"
+                ]
+              }
             ]
           },
           {
-            "group": "Architecture",
-            "pages": [
-              "engineering/architecture/index",
-              "engineering/architecture/services-overview",
-              "engineering/architecture/data-models"
+            "tab": "Políticas",
+            "groups": [
+              {
+                "group": "Visão geral",
+                "pages": ["pt-br/policies/index"]
+              },
+              {
+                "group": "Conduta e despesas",
+                "pages": [
+                  "pt-br/policies/code-of-conduct",
+                  "pt-br/policies/expense-reimbursement",
+                  "pt-br/policies/travel-policy"
+                ]
+              },
+              {
+                "group": "Trabalho remoto",
+                "pages": [
+                  "pt-br/policies/remote-work/index",
+                  "pt-br/policies/remote-work/home-office-setup",
+                  "pt-br/policies/remote-work/time-zones"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "Engenharia",
+            "groups": [
+              {
+                "group": "Visão geral",
+                "pages": ["pt-br/engineering/index"]
+              },
+              {
+                "group": "Setup e deploy",
+                "pages": [
+                  "pt-br/engineering/dev-setup",
+                  "pt-br/engineering/deployment"
+                ]
+              },
+              {
+                "group": "Resposta a incidentes",
+                "pages": [
+                  "pt-br/engineering/incident-response/index",
+                  "pt-br/engineering/incident-response/on-call",
+                  "pt-br/engineering/incident-response/postmortem"
+                ]
+              },
+              {
+                "group": "Arquitetura",
+                "pages": [
+                  "pt-br/engineering/architecture/index",
+                  "pt-br/engineering/architecture/services-overview",
+                  "pt-br/engineering/architecture/data-models"
+                ]
+              }
             ]
           }
         ]
