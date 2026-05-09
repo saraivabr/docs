@@ -1,0 +1,40 @@
+---
+title: "Configuração do notebook"
+description: "Configure seu notebook corporativo do primeiro boot até estar pronto para trabalhar."
+---
+
+Todos os notebooks corporativos vêm com uma imagem base do sistema operacional e gerenciamento de endpoint pré-instalado. Não formate nem reinstale o sistema sem aprovação do TI.
+
+## Primeiro boot
+
+1. Ligue a máquina e siga o assistente de configuração do sistema. Use seu e-mail corporativo quando solicitado.
+2. O perfil de MDM do TI será instalado automaticamente em alguns minutos após a conexão com o Wi-Fi. Não pule nem feche nenhum prompt do MDM.
+3. Verifique seu e-mail para uma mensagem do TI confirmando o enrollment. Se não chegar em 30 minutos, abra um [ticket](/pt-br/it-security/access-requests).
+
+## Software obrigatório
+
+O TI envia automaticamente via MDM:
+
+- Gerenciador de senhas
+- Agente de segurança de endpoint
+- Cliente de VPN (veja [configuração da VPN](/pt-br/onboarding/tools/vpn-setup))
+- Agente de SSO
+
+Não é preciso instalar manualmente. Se algo estiver faltando após 24 horas, contate o TI.
+
+## Configuração específica do cargo
+
+Seu gestor ou tech lead vai indicar um guia de setup específico do time. Para devs, veja [setup de desenvolvimento](/pt-br/engineering/dev-setup).
+
+## Criptografia
+
+Criptografia de disco completa é obrigatória em todos os dispositivos corporativos. O MDM aplica isso automaticamente. Verifique se está habilitada:
+
+- **macOS** — Configurações do Sistema → Privacidade e Segurança → FileVault
+- **Windows** — Configurações → Privacidade e Segurança → Criptografia de dispositivo
+
+Se a criptografia estiver desligada, o TI pode habilitá-la remotamente. Abra um ticket.
+
+## Problemas
+
+Se sua máquina tiver problemas de hardware ou faltar software, fale com o help desk do TI. Não tente resolver problemas de hardware por conta própria — isso anula a garantia.

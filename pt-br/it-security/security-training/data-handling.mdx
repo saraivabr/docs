@@ -1,0 +1,39 @@
+---
+title: "Manuseio de dados"
+description: "Como classificar, armazenar e compartilhar dados da empresa e dos clientes com responsabilidade."
+---
+
+A forma como você lida com dados tem consequências legais, contratuais e de reputação. Estas diretrizes valem para todas as pessoas colaboradoras e prestadoras.
+
+## Classificação de dados
+
+Usamos quatro níveis:
+
+| Classificação | Exemplos | Manuseio |
+|---------------|----------|----------|
+| **Público** | Conteúdo de marketing, docs públicos | Sem restrições |
+| **Interno** | Notas de reunião, roadmaps, organogramas | Não compartilhe externamente sem aprovação |
+| **Confidencial** | Dados de clientes, dados financeiros, contratos | Criptografar em trânsito e em repouso, acesso por necessidade |
+| **Restrito** | Credenciais, dados de saúde pessoais, info de M&A | Controles estritos de acesso, reporte qualquer exposição imediatamente |
+
+Na dúvida, trate o dado como um nível acima do que você acha que ele é.
+
+## Regras de armazenamento
+
+- **Apenas ferramentas aprovadas** — Use armazenamento aprovado pela empresa (por exemplo, Google Drive, Notion, S3). Não armazene dados da empresa em Dropbox pessoal, iCloud ou similares.
+- **Sem cópias locais de dados de clientes** — Dados de clientes precisam ficar nos sistemas aprovados. Não baixe para o notebook para análise. Use as ferramentas autorizadas de query.
+- **Credenciais nunca ficam em código** — Use um secrets manager. Se encontrar credenciais em código, faça a rotação e abra um ticket de segurança.
+
+## Compartilhamento de dados
+
+- **Interno** — Use a ferramenta apropriada para o público. Não coloque endereços de e-mail pessoais em CC de threads internos.
+- **Externo** — Dados confidenciais compartilhados com fornecedores precisam estar cobertos por NDA. Cheque com o jurídico se tiver dúvida.
+- **Dados de cliente** — Nunca compartilhe dados de cliente com terceiros sem um data processing agreement vigente. Se receber uma solicitação de dado de cliente, encaminhe para o time jurídico e de privacidade.
+
+## Retenção e exclusão
+
+Dados não devem ser retidos por mais tempo do que o necessário. Quando um projeto encerra ou um cliente faz offboarding, siga o cronograma de retenção do runbook do time jurídico.
+
+## Reportando um incidente de dados
+
+Se você acidentalmente expôs, compartilhou ou perdeu acesso a dados confidenciais ou restritos, reporte para `security@example.com` imediatamente. Inclua o que aconteceu, quais dados estavam envolvidos e quem pode ter visto. Reportes rápidos reduzem o dano — não há penalidade por erros honestos reportados a tempo.

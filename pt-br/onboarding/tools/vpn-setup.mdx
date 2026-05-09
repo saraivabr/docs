@@ -1,0 +1,44 @@
+---
+title: "Configuração da VPN"
+description: "Conecte-se à VPN da empresa para acessar ferramentas e sistemas internos."
+---
+
+O cliente de VPN é instalado automaticamente pelo MDM. Este guia cobre a primeira conexão e a resolução de problemas comuns.
+
+## Primeira conexão
+
+1. Abra o cliente de VPN na pasta Aplicativos (macOS) ou no menu Iniciar (Windows).
+2. Quando solicitar um servidor, informe o endereço que o TI passou no e-mail de boas-vindas.
+3. Autentique com suas credenciais e o MFA.
+4. Você verá o status "Conectado" em até 10 segundos.
+
+## Quando a VPN é obrigatória
+
+A VPN é obrigatória para acessar:
+
+- Dashboards internos e ferramentas de admin
+- Ambientes de staging e produção
+- Repositórios de código
+- Portal do RH e sistemas de folha de pagamento
+
+A VPN não é obrigatória para: e-mail, Slack, Zoom ou qualquer ferramenta SaaS que use SSO.
+
+## Split tunnel vs. full tunnel
+
+A VPN está configurada como split tunnel por padrão — apenas o tráfego destinado a sistemas internos passa pela VPN. Navegação web normal vai direto. Não altere essa configuração.
+
+## Mantendo a conexão
+
+O cliente de VPN reconecta automaticamente após sleep ou mudanças de rede. Se não reconectar, desconecte e conecte manualmente.
+
+Para trabalho remoto a partir de outro país, fale com o TI antes — algumas restrições geográficas se aplicam.
+
+## Resolução de problemas
+
+**Não consegue autenticar** — Confirme que seu MFA está configurado. Se foi resetado recentemente, fale com o TI.
+
+**Conectado, mas não acessa ferramentas internas** — Tente desconectar e reconectar. Se persistir, reinicie o cliente de VPN.
+
+**Cliente de VPN não está instalado** — Verifique se o enrollment do MDM foi concluído. Veja [configuração do notebook](/pt-br/onboarding/tools/laptop-setup).
+
+Ainda travado? Abra um [ticket de TI](/pt-br/it-security/access-requests).

@@ -1,0 +1,33 @@
+---
+title: "Resposta a incidentes"
+description: "Como detectamos, respondemos e aprendemos com incidentes em produção."
+---
+
+Quando algo quebra em produção, o objetivo é restaurar o serviço o mais rápido possível — depois entender por quê.
+
+## Níveis de severidade
+
+| Nível | Descrição | Tempo de resposta |
+|-------|-----------|-------------------|
+| SEV-1 | Produção fora ou perda de dados | Imediato, todas as mãos |
+| SEV-2 | Degradação significativa, funcionalidade principal quebrada | Em até 30 minutos |
+| SEV-3 | Degradação menor, com workaround disponível | Em até 2 horas |
+| SEV-4 | Problema cosmético ou de baixo impacto | Próximo dia útil |
+
+## Respondendo a um alerta
+
+1. **Reconheça** o alerta na sua ferramenta de alertas para sinalizar que está atuando.
+2. **Avalie a severidade** — é SEV-1/2 ou abaixo?
+3. **Abra uma war room** — para SEV-1/2, crie uma thread no Slack em `#incidents` e convide seu par de on-call.
+4. **Mitigar primeiro** — rollback, desligar uma feature flag ou escalar antes de diagnosticar a causa raiz.
+5. **Comunique** — poste atualizações em `#incidents` a cada 15 minutos até a resolução.
+6. **Resolva e documente** — marque o incidente como resolvido e abra um postmortem para SEV-1/2.
+
+<CardGroup cols={2}>
+  <Card title="Expectativas de on-call" icon="phone" href="/pt-br/engineering/incident-response/on-call">
+    Escala de rotação, caminhos de escalonamento e o que fazer quando você é paged.
+  </Card>
+  <Card title="Processo de postmortem" icon="file-text" href="/pt-br/engineering/incident-response/postmortem">
+    Como escrever um postmortem blameless e garantir o follow-through.
+  </Card>
+</CardGroup>

@@ -1,0 +1,80 @@
+---
+title: "Início"
+description: "Guias de onboarding, políticas de RH, suporte de TI e runbooks de departamento para toda a empresa."
+mode: custom
+---
+
+<div className="mx-auto flex w-full max-w-[720px] flex-col gap-12 px-4 py-10 lg:gap-14 lg:py-16">
+  <div className="flex flex-col items-center gap-6">
+    <div className="flex max-w-[480px] flex-col gap-2 text-center">
+      <h1 className="text-2xl font-semibold tracking-tight text-gray-900 dark:text-gray-50">
+        Sua jornada começa aqui
+      </h1>
+      <p className="text-balance text-base text-gray-600 dark:text-gray-400">
+        Esta é sua referência principal para entender como as coisas funcionam por aqui. Use as abas para navegar pelos recursos ou pesquise com <kbd>⌘</kbd> <kbd>K</kbd>.
+      </p>
+    </div>
+  </div>
+
+  <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+    <a
+      href="/pt-br/onboarding/first-day"
+      className="group flex flex-col outline-none"
+    >
+      <div
+        className="kb-feature-card relative flex h-[170px] items-center justify-center overflow-hidden rounded-2xl ring-1 ring-gray-100 transition group-hover:ring-gray-200 dark:ring-white/[0.08] dark:group-hover:ring-white/15 saturate-50 group-hover:saturate-100"
+      >
+        <div className="relative flex items-center justify-center">
+          <Icon icon="calendar-1" size={36} className="!bg-white" />
+        </div>
+      </div>
+      <div className="flex flex-col gap-1 pt-4">
+        <span className="text-base font-medium text-gray-900 dark:text-gray-50">Seu primeiro dia</span>
+        <span className="text-sm leading-5 text-gray-600 dark:text-gray-400">
+          O primeiro dia é dedicado à ambientação e à conexão com pessoas-chave do time.
+        </span>
+      </div>
+    </a>
+
+    <a
+      href="/pt-br/onboarding/tools/account-access"
+      className="group flex flex-col outline-none"
+    >
+      <div
+        className="kb-feature-card relative flex h-[170px] items-center justify-center overflow-hidden rounded-2xl ring-1 ring-gray-100 transition group-hover:ring-gray-200 dark:ring-white/[0.08] dark:group-hover:ring-white/15 saturate-50 group-hover:saturate-100"
+      >
+        <div className="relative flex items-center justify-center">
+          <Icon icon="key-round" size={36} className="!bg-white" />
+        </div>
+      </div>
+      <div className="flex flex-col gap-1 pt-4">
+        <span className="text-base font-medium text-gray-900 dark:text-gray-50">Acesso a contas</span>
+        <span className="text-sm leading-5 text-gray-600 dark:text-gray-400">
+          Quais contas você vai precisar, como reivindicá-las e o que fazer se algo estiver faltando.
+        </span>
+      </div>
+    </a>
+  </div>
+
+  <div className="flex flex-col gap-4">
+    <h2 className="text-lg font-medium tracking-tight text-gray-900 dark:text-gray-50">Recursos</h2>
+
+    <Columns cols={2}>
+      <Card title="RH e Pessoas" icon="users" iconType="light" href="/pt-br/hr-people">
+        Benefícios, folgas, avaliações de desempenho e remuneração.
+      </Card>
+      <Card title="TI e Segurança" icon="shield-check" iconType="light" href="/pt-br/it-security">
+        Solicitações de acesso, política de dispositivos e treinamento de segurança.
+      </Card>
+    </Columns>
+
+    <Columns cols={2}>
+      <Card title="Políticas" icon="scroll" iconType="light" href="/pt-br/policies">
+        Código de conduta, reembolso de despesas, viagens e trabalho remoto.
+      </Card>
+      <Card title="Engenharia" icon="code-xml" iconType="light" href="/pt-br/engineering">
+        Configuração de dev, deploy, resposta a incidentes e arquitetura.
+      </Card>
+    </Columns>
+  </div>
+</div>

@@ -1,0 +1,51 @@
+---
+title: "Processo de postmortem"
+description: "Como escrever um postmortem blameless, conduzir a review e garantir que os action items aconteçam."
+---
+
+Postmortems são obrigatórios para todos os incidentes SEV-1 e SEV-2 e opcionais para padrões recorrentes de SEV-3. O objetivo é aprender, não culpar.
+
+## Blameless significa
+
+Blameless significa que focamos no que falhou no sistema — processos, ferramental, alertas, comunicação — não em quem cometeu um erro. Pessoas devs tomam boas decisões com a informação disponível no momento. O postmortem identifica onde o sistema as deixou na mão.
+
+## Cronograma
+
+| Quando | Ação |
+|--------|------|
+| Em até 24h da resolução | Crie o doc de postmortem a partir do template |
+| Em até 48h | Esboce a timeline e os fatores contribuintes |
+| Em até 5 dias úteis | Realize a reunião de review do postmortem |
+| Em até 2 semanas | Action items atribuídos e rastreados no issue tracker |
+
+## Template de postmortem
+
+Crie um doc novo no wiki usando o template de Postmortem. Preencha:
+
+1. **Resumo do incidente** — um parágrafo: o que aconteceu, quando e qual foi o impacto.
+2. **Timeline** — log cronológico dos eventos (use UTC). Inclua quando o problema começou, quando foi detectado, ações principais e quando foi resolvido.
+3. **Causa raiz** — qual foi a causa subjacente? Use "5 Whys" se ajudar.
+4. **Fatores contribuintes** — o que mais piorou ou dificultou a detecção?
+5. **Impacto** — número de usuários afetados, duração, dados envolvidos.
+6. **O que foi bem** — coisas que ajudaram durante a resposta.
+7. **Action items** — concretos, atribuídos, com prazo. Pelo menos um por fator contribuinte significativo.
+
+## A reunião de review
+
+Mantenha entre 30 e 45 minutos. A pessoa dona do incidente facilita. Todas as pessoas envolvidas devem participar; outras são bem-vindas.
+
+Pauta:
+1. Walkthrough da timeline (10 min)
+2. Discussão de causa raiz e fatores contribuintes (10 min)
+3. Revisão e atribuição dos action items (15 min)
+
+Não reabra decisões tomadas durante o incidente. Foque no que fazer diferente da próxima vez.
+
+## Action items
+
+Action items sem dono não acontecem. Cada item precisa de:
+- Descrição clara do que é "feito"
+- Um único dono (não um time)
+- Prazo
+
+Rastreie no issue tracker. O engineering manager revisa os action items abertos do postmortem na reunião semanal do time.
